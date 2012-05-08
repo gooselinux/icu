@@ -1,6 +1,6 @@
 Name:      icu
 Version:   4.2.1
-Release:   9%{?dist}
+Release:   9%{?dist}.goose.1
 Summary:   International Components for Unicode
 Group:     Development/Tools
 License:   MIT and UCD and Public Domain
@@ -142,6 +142,9 @@ rm -rf $RPM_BUILD_ROOT
 %doc source/__docs/%{name}/html/*
 
 %changelog
+* Tue May 8 2012 Clint Savage <herlo@gooseproject.org> - 4.2.1-9.goose.1
+- Rebuild for GoOSe 6.0
+
 * Thu May 27 2010 Caolan McNamara <caolanm@redhat.com> - 4.2.1-9
 - Resolves: rhbz#596171 drop icu.icu6284.strictalias.patch and use
   -fno-strict-aliasig as upstream has added a pile more and doesn't look
