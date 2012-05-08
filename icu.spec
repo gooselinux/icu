@@ -8,7 +8,7 @@ URL:       http://www.icu-project.org/
 Source0:   http://download.icu-project.org/files/icu4c/4.2.1/icu4c-4_2_1-src.tgz
 Source1:   icu-config
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
-BuildRequires: doxygen, autoconf
+BuildRequires: doxygen autoconf gcc-c++
 Requires: lib%{name} = %{version}-%{release}
 
 Patch1:  icu-3.4-multiarchdevel.patch
@@ -144,6 +144,7 @@ rm -rf $RPM_BUILD_ROOT
 %changelog
 * Tue May 8 2012 Clint Savage <herlo@gooseproject.org> - 4.2.1-9.goose.1
 - Rebuild for GoOSe 6.0
+- Added gcc-c++ as BuildRequires
 
 * Thu May 27 2010 Caolan McNamara <caolanm@redhat.com> - 4.2.1-9
 - Resolves: rhbz#596171 drop icu.icu6284.strictalias.patch and use
